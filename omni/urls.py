@@ -1,10 +1,11 @@
 from django.conf.urls import url
 
-from .views import index, site, template
+from .views import index, site, template, login
 
 app_name = 'omni'
 urlpatterns = [
     url(r'^$', index.View.as_view(), name='index'),
+    url(r'^login/$', login.view, name='login'),
     url(r'^sites/$', site.View.as_view(), name='sites'),
     url(r'^sites/(?P<pk>[0-9]+)/$', site.detail, name='site_edit'),
     url(r'^templates/$', template.View.as_view(), name='templates'),
