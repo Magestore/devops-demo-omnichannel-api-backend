@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from django.views import generic
+from django.views.generic import basic
 
 # Create your views here.
-class IndexView(generic.basic.TemplateView):
+class IndexView(basic.TemplateView):
     template_name = 'index.html'
