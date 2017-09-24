@@ -8,9 +8,9 @@ from django.views.generic.basic import TemplateView
 from django.urls import reverse
 
 # Create your views here.
-class Index(ListView):
+class Index(TemplateView):
     template_name = 'index.html'
-    pass
+
 
 class Sites(ListView):
     pass
