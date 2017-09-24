@@ -7,6 +7,10 @@ from django.urls import reverse
 
 # Create your views here.
 def view(request):
+
+    def get(request):
+        return repr(request)
+
     u = request.POST['username']
     p = request.POST['password']
     return render(request, 'login.html', {'user': {'u': u, 'p': p}})
