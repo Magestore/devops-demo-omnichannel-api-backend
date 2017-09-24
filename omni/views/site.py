@@ -6,7 +6,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
 from django.urls import reverse
 
-class SitesView(ListView):
+class View(ListView):
     template_name = 'sites.html'
 
 # Create your views here.
