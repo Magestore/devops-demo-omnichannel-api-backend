@@ -1,12 +1,12 @@
 from django.conf.urls import url
 
-from . import view_models
+from .view_models import index, sites, templates
 
 app_name = 'omni'
 urlpatterns = [
-    url(r'^$', view_models.index.IndexView.as_view(), name='index'),
-    url(r'^sites/$', view_models.sites.SitesView.as_view(), name='sites'),
-    url(r'^sites/(?P<pk>[0-9]+)/$', view_models.sites.detail, name='site_edit'),
-    url(r'^templates/$', view_models.templates.Templates.as_view(), name='templates'),
-    url(r'^templates/(?P<pk>[0-9]+)/$', view_models.templates.detail, name='template_edit'),
+    url(r'^$', index.IndexView.as_view(), name='index'),
+    url(r'^sites/$', sites.SitesView.as_view(), name='sites'),
+    url(r'^sites/(?P<pk>[0-9]+)/$', sites.detail, name='site_edit'),
+    url(r'^templates/$', templates.Templates.as_view(), name='templates'),
+    url(r'^templates/(?P<pk>[0-9]+)/$', templates.detail, name='template_edit'),
 ]
