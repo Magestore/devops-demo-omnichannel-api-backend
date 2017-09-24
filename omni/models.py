@@ -5,6 +5,23 @@ from django.db import models
 from django.db.models import Model
 
 # Create your models here.
+class Extension(Model):
+    id = models.IntegerField(default=0)
+    name = models.CharField(max_length=30)
+    repo_url = models.CharField(max_length=150)
+    branch = models.CharField(max_length=30, default='master')
+
+class TemplateExtension(Model):
+    id = models.IntegerField(default=0)
+    extension_id = models.ForeignKey(Extension, on_delete=models.CASCADE)
+    template_id = models.ForeignKey(Template, on_delete=models.CASCADE)
+
+class SiteExtension(Model):
+    id = models.IntegerField(default=0)
+    extension_id = models.ForeignKey(Extension, on_delete=models.CASCADE)
+    template_id = models.ForeignKey(Site, on_delete=models.CASCADE)
+
+
 class Site(Model):
     id = models.IntegerField(default=0)
     url_path = models.CharField(max_length=30)
@@ -35,18 +52,3 @@ class Template(Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=500)
 
-class Extension(Model):
-    id = models.IntegerField(default=0)
-    name = models.CharField(max_length=30)
-    repo_url = models.CharField(max_length=150)
-    branch = models.CharField(max_length=30, default='master')
-
-class TemplateExtension(Model):
-    id = models.IntegerField(default=0)
-    extension_id = models.ForeignKey(Extension, on_delete=models.CASCADE)
-    template_id = models.ForeignKey(Template, on_delete=models.CASCADE)
-
-class SiteExtension(Model):
-    id = models.IntegerField(default=0)
-    extension_id = models.ForeignKey(Extension, on_delete=models.CASCADE)
-    template_id = models.ForeignKey(Site, on_delete=models.CASCADE)
