@@ -6,7 +6,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
 from django.urls import reverse
 
-class Templates(ListView):
+class TemplatesView(ListView):
     template_name = 'templates.html'
 
 
