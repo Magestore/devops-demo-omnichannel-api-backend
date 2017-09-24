@@ -6,13 +6,13 @@ from django.db.models import Model
 
 # Create your models here.
 class Extension(Model):
-    id = models.IntegerField(default=0)
+    model_id = models.IntegerField(default=0)
     name = models.CharField(max_length=30)
     repo_url = models.CharField(max_length=150)
     branch = models.CharField(max_length=30, default='master')
 
 class Site(Model):
-    id = models.IntegerField(default=0)
+    site_id = models.IntegerField(default=0)
     url_path = models.CharField(max_length=30)
     admin_user = models.CharField(max_length=30)
     admin_password = models.CharField(max_length=60)
@@ -25,7 +25,7 @@ class Site(Model):
     title = models.CharField(max_length=50)
 
 class Template(Model):
-    id = models.IntegerField(default=0)
+    template_id = models.IntegerField(default=0)
     admin_user = models.CharField(max_length=30)
     admin_password = models.CharField(max_length=60)
     db_name = models.CharField(max_length=100)
@@ -39,11 +39,11 @@ class Template(Model):
     description = models.CharField(max_length=500)
 
 class TemplateExtension(Model):
-    id = models.IntegerField(default=0)
+    temp_ext_id = models.IntegerField(default=0)
     extension_id = models.ForeignKey(Extension, on_delete=models.CASCADE)
     template_id = models.ForeignKey(Template, on_delete=models.CASCADE)
 
 class SiteExtension(Model):
-    id = models.IntegerField(default=0)
+    site_ext_id = models.IntegerField(default=0)
     extension_id = models.ForeignKey(Extension, on_delete=models.CASCADE)
     template_id = models.ForeignKey(Site, on_delete=models.CASCADE)
