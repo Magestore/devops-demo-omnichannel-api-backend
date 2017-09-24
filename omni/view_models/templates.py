@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView
+from django.views.generic.basic import TemplateView
+from django.urls import reverse
+
+class Templates(ListView):
+    template_name = 'templates.html'
+
 
 # Create your views here.
 def detail(request, id):
     pass
-
-
