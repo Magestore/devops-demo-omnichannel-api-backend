@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.contrib import admin
 
-import views.py
+import views
 
 app_name = 'omni'
 urlpatterns = [
