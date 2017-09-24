@@ -8,7 +8,7 @@ from django.views.generic.basic import TemplateView
 from django.urls import reverse
 
 # Create your views here.
-class Index(TemplateView):
+class IndexView(TemplateView):
     template_name = 'index.html'
 
 
