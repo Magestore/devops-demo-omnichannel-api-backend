@@ -20,6 +20,6 @@ from django.core.urlresolvers import reverse_lazy
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('omni.urls')),
-    url(r'^login/$', 'django.contrib.auth.views.login', name='login'),
-    url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout'),
+    url(r'^login/$', django.contrib.auth.views.login, name='login'),
+    url(r'^logout/$', django.contrib.auth.views.logout, name='logout'),
 ]
