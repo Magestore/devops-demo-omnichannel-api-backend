@@ -3,10 +3,10 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from .models import *
+from omni import models
 
 # Register your models here.
 
-admin.site.register(Site)
-admin.site.register(Template)
-admin.site.register(Extension)
+admin.site.register(models.Site)
+admin.site.register(models.Template)
+admin.site.register(models.Extension)
