@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.core.urlresolvers import reverse_lazy
+from omni.views import login, logout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('omni.urls')),
-    url(r'^login/$', omni.views.login.view, name='login'),
-    url(r'^logout/$', omni.views.logout.view, name='logout'),
+    url(r'^login/$', login.view, name='login'),
+    url(r'^logout/$', logout.view, name='logout'),
 ]
