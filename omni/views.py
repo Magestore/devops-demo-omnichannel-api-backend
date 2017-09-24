@@ -13,8 +13,8 @@ class IndexView(TemplateView):
 
 
 class Sites(ListView):
-    pass
+    template_name = 'sites.html'
 
 class Templates(ListView):
-    pass
+    template_name = 'templates.html'
 
