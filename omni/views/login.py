@@ -8,7 +8,7 @@ from django.views.generic import View
 
 class LoginView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'login.html', {'user': {'u': u, 'p': p}})
+        return render(request, 'login.html', {'user': {'u': '', 'p': ''}})
 
     def post(self, request, *args, **kwargs):
         u = request.GET['username']
