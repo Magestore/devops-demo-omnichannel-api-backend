@@ -17,7 +17,7 @@ class LoginView(View):
 
         next = 'next=' + request.POST.get('next', '')
 
-        raise Exception(args)
+        raise Exception(args, next)
 
         return redirect(reverse('login', args=[next]))
 
