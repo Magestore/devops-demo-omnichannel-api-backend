@@ -20,7 +20,7 @@ class LoginView(View):
             else:
                 return redirect('omni:index')
         else:
-            request.session['username'] = redirect.POST.get('username', '')
-            request.session['password'] = redirect.POST.get('password', '')
+            request.session['username'] = request.POST.get('username', '')
+            request.session['password'] = request.POST.get('password', '')
             return redirect(reverse('omni:login'))
 
