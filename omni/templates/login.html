@@ -2,7 +2,7 @@
 
 {% block title %}Login | {{ block.super }}{% endblock %}
 
-{{ block_navbar }}
+{% get_template('header.html') %}
 
 {% block content %}
 <form action="/login/" method="POST">
