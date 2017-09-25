@@ -13,10 +13,9 @@ class View(ListView):
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        return super(ProtectedView, self).dispatch(*args, **kwargs)
+        return super(View, self).dispatch(*args, **kwargs)
 
 # Create your views here.
+@method_decorator(login_required)
 def detail(request, id):
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(ProtectedView, self).dispatch(*args, **kwargs)
+    HttpResponse('okok')
