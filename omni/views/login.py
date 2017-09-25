@@ -17,7 +17,7 @@ class LoginView(View):
 
         next = 'next=' + request.GET.get('next', '')
 
-        return redirect(reverse('login', args=[next]))
+        return redirect(reverse('templates', args=[next]))
 
         if user.mylogin(request):
 
