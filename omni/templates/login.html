@@ -2,9 +2,7 @@
 
 {% block title %}Login | {{ block.super }}{% endblock %}
 
-{% load include %}
 {% include('header.html') %}
-
 
 {% block content %}
 <form action="/login/" method="POST">
