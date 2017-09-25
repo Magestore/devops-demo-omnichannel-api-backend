@@ -8,9 +8,10 @@ from django.views.generic import View
 from omni.models import user
 
 class LoginView(View):
+
     def get(self, request, *args, **kwargs):
-        next = 'next=123'
-        return "%s?%s" % (redirect(reverse('omni:templates')), next)
+        # next = 'next=123'
+        # return "%s?%s" % (redirect(reverse('omni:templates')), next)
         return render(request, 'login.html', {'user': {'u': '', 'p': ''}})
 
     def post(self, request, *args, **kwargs):
