@@ -5,7 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse
 from django.views.generic import View
-from django.template.loaders.base.Loader import get_template_sources
+from django.template.loaders.base import Loader
 from omni.models import user
 
 class LoginView(View):
