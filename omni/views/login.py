@@ -9,6 +9,7 @@ from omni.models import user
 
 class LoginView(View):
     def get(self, request, *args, **kwargs):
+        return redirect(reverse('omni:templates'))
         return render(request, 'login.html', {'user': {'u': '', 'p': ''}})
 
     def post(self, request, *args, **kwargs):
