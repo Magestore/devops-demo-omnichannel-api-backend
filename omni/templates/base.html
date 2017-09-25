@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--parent_head-->
     {% block parent_head %}
     <meta charset="UTF-8">
+    {% block static_files %}
+    <!--all default files-->
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+        {% block add_static %}
+        <!--add more static files here-->
+        {% endblock %}
+    {% endblock %}
     <title>{% block title %}Omnichannel{% endblock %}</title>
+
     {% block head %}
     <!--head-->
     {% endblock %}
     {% endblock %}
+    <!--end parent_head-->
 </head>
 
 <body>
@@ -29,13 +38,16 @@
         {% endblock %}
     </header>
 
+    <!--content-->
     <div id="content">
         {% block content %}{% endblock %}
     </div>
+    <!--end content-->
 
     <footer id="footer">
         {% block footer %}{% endblock %}
     </footer>
+
     {% block before_body_end %}
     <!--body_end-->
     {% endblock %}
