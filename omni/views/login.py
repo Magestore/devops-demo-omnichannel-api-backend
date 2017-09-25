@@ -15,7 +15,8 @@ class LoginView(View):
         u = request.POST['username']
         p = request.POST['password']
 
-        return args
+        print(args)
+        return 
 
         if user.mylogin(request):
 
