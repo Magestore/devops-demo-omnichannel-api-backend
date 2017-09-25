@@ -12,5 +12,5 @@ class View(ListView):
         return {'ok':'ok'}
 
 # Create your views here.
-def detail(request, id):
+def detail(request, template_id):
     pass
