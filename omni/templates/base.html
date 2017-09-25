@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% block parent_head %}
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <title>{% block title %}Omnichannel{% endblock %}</title>
+    {% block head %}
+    <!--head-->
+    {% endblock %}
+    {% endblock %}
 </head>
 
 <body>
+    {% block before_body_start %}
+    <!--body_start-->
+    {% endblock %}
     <header>
+        {% block header %}
         <nav id="sidebar">
             {% block navbar %}
             <ul>
@@ -16,6 +26,7 @@
             </ul>
             {% endblock %}
         </nav>
+        {% endblock %}
     </header>
 
     <div id="content">
@@ -25,5 +36,8 @@
     <footer id="footer">
         {% block footer %}{% endblock %}
     </footer>
+    {% block before_body_end %}
+    <!--body_end-->
+    {% endblock %}
 </body>
 </html>
