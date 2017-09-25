@@ -15,6 +15,9 @@ class View(ListView):
     def dispatch(self, *args, **kwargs):
         return super(View, self).dispatch(*args, **kwargs)
 
+    def get_queryset(self):
+        return {'ok':'ok'}
+
 # Create your views here.
 @method_decorator(login_required)
 def detail(request, id):
