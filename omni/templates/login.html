@@ -2,7 +2,9 @@
 
 {% block title %}Login | {{ block.super }}{% endblock %}
 
+{% block navbar %}
 {% include "header.html" %}
+{% endblock %}
 
 {% block content %}
 <form action="/login/" method="POST">
