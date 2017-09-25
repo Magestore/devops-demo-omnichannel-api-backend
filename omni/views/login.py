@@ -15,12 +15,12 @@ class LoginView(View):
         u = request.POST['username']
         p = request.POST['password']
 
-        print(args)
-        return 
+        next = 'next=' + request.POST.get('next', '')
+        return redirect(reverse('login', args=[next]))
 
         if user.mylogin(request):
 
-            return redirect(reverse('login', args=['next=' + request.path]))
+            return redirect(reverse('login', args=[next]))
         else:
             return redirect(reverse('login', args=['next='+request.path]))
         return render(request, 'login_post.html', {'user': {'u': u, 'p': p}})
