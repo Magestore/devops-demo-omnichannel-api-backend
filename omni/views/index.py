@@ -12,4 +12,4 @@ class View(TemplateView):
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        return super(ProtectedView, self).dispatch(*args, **kwargs)
+        return super(View, self).dispatch(*args, **kwargs)
