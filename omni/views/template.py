@@ -8,7 +8,8 @@ from django.urls import reverse
 
 class View(ListView):
     template_name = 'templates.html'
-
+    def get_queryset(self):
+        return {'ok':'ok'}
 
 # Create your views here.
 def detail(request, id):
