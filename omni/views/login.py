@@ -11,6 +11,6 @@ class LoginView(View):
         return render(request, 'login.html', {'user': {'u': '', 'p': ''}})
 
     def post(self, request, *args, **kwargs):
-        u = request.GET['username']
-        p = request.GET['password']
+        u = request.POST['username']
+        p = request.POST['password']
         return render(request, 'login_post.html', {'user': {'u': u, 'p': p}})
