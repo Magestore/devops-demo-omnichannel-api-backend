@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}Omnichannel{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <nav id="sidebar">
+            {% block navbar %}
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+            {% endblock %}
+        </nav>
+    </header>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer id="footer">
+        {% block footer %}{% endblock %}
+    </footer>
+</body>
+</html>

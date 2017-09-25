@@ -10,21 +10,17 @@ from omni.models import user
 class LoginView(View):
 
     def get(self, request, *args, **kwargs):
-        next = request.GET.get('next', '')
-        return redirect(next)
         return render(request, 'login.html', {'user': {'u': '', 'p': ''}})
 
     def post(self, request, *args, **kwargs):
-        u = request.POST['username']
-        p = request.POST['password']
-
-        next = 'next=' + request.GET.get('next', '')
-
-        return "%s?%s" % (redirect(reverse('omni:templates')), next)
-
         if user.mylogin(request):
-            return redirect(reverse('omni:templates'))
-            return redirect(reverse('login', args=[next]))
+            next = request.GET.get('next', '')
+            if next:
+                return redirect(next)
+            else:
+                return redirect('omni:index')
         else:
-            return redirect(reverse('login', args=['next='+request.path]))
-        return render(request, 'login_post.html', {'user': {'u': u, 'p': p}})
+            request.session['username'] = redirect.POST.get('username', '')
+            request.session['password'] = redirect.POST.get('password', '')
+            return redirect(reverse('omni:login'))
+
