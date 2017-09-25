@@ -22,5 +22,5 @@ class LoginView(View):
         else:
             request.session['username'] = request.POST.get('username', '')
             request.session['password'] = request.POST.get('password', '')
-            return redirect(reverse('omni:login'))
+            return redirect(reverse('login'))
 
