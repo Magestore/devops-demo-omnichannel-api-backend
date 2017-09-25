@@ -17,7 +17,7 @@ class LoginView(View):
 
         next = 'next=' + request.GET.get('next', '')
 
-        return redirect(reverse('omni:templates', args=[next]))
+        return redirect(reverse('omni:templates'))
 
         if user.mylogin(request):
 
