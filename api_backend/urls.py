@@ -21,6 +21,6 @@ from omni.views import login, logout
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('omni.urls')),
-    url(r'^login/$', login.view, name='login'),
+    url(r'^login/$', login.LoginView.as_view(), name='login'),
     url(r'^logout/$', logout.view, name='logout'),
 ]
