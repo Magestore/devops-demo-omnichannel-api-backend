@@ -10,4 +10,4 @@ from omni.models import user
 # Create your views here.
 def view(request):
     user.mylogout(request)
-    return redirect('logout')
+    return redirect('login')
