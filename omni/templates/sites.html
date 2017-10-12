@@ -1,1 +1,70 @@
-index.html
+{% extends "content.html" %}
+
+{% block title %}Login | {{ block.super }}{% endblock %}
+
+{% block header %}
+    {% include "header.html" %}
+{% endblock %}
+
+{% block content %}
+
+<h1>Site Management</h1>
+
+<div class="actions">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-9"><button><span>Create</span></button></div>
+        </div>
+    </div>
+</div>
+<div class="wrap">
+    <div class="list site">
+        <div class="mass_action">
+            <select name="select_items">
+                <option value="">-- Select action --</option>
+                <option value="delete">Disable selected</option>
+                <option value="delete">Delete selected</option>
+            </select>
+        </div>
+        <ul class="list">
+            <li class="li_head li_row">
+                <ul>
+                    <li class="select_all"><input type="checkbox" name="select_all" title="Select all"/></li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_1">
+                <ul>
+                    <li class="checkbox_item"><input type="checkbox" name="select_1" title="Select 1"/></li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_2">
+                <ul>
+                    <li class="checkbox_item"><input type="checkbox" name="select_2" title="Select 2"/></li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_3">
+                <ul>
+                    <li class="checkbox_item"><input type="checkbox" name="select_3" title="Select 3"/></li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}

@@ -1,1 +1,91 @@
-index.html
+{% extends "content.html" %}
+
+{% block title %}Login | {{ block.super }}{% endblock %}
+
+{% block header %}
+    {% include "header.html" %}
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to Demo System!</h1>
+<div class="wrap">
+    <div class="list site">
+        <ul class="list">
+            <li class="li_head li_row">
+                <ul>
+                    <li>col 1</li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_1">
+                <ul>
+                    <li>col 1</li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_2">
+                <ul>
+                    <li>col 1</li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_3">
+                <ul>
+                    <li>col 1</li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="wrap">
+    <div class="list template">
+        <ul class="list">
+            <li class="li_head li_row">
+                <ul>
+                    <li>col 1</li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_1">
+                <ul>
+                    <li>col 1</li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_2">
+                <ul>
+                    <li>col 1</li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+            <li class="li_row row_3">
+                <ul>
+                    <li>col 1</li>
+                    <li>col 2</li>
+                    <li>col 3</li>
+                    <li>col 4</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}

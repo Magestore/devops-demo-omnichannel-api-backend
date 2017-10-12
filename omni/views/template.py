@@ -8,6 +8,11 @@ from django.urls import reverse
 
 class View(ListView):
     template_name = 'templates.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(View, self).dispatch(*args, **kwargs)
+
     def get_queryset(self):
         return {'ok':'ok'}
 

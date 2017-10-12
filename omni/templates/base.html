@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--parent_head-->
-    {% block parent_head %}
+<!--parent_head-->
+{% block parent_head %}
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     {% block static_files %}
     <!--all default files-->
     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-        {% block add_static %}
-        <!--add more static files here-->
-        {% endblock %}
+
+    {% block add_static %}
+    <!--add more static files here-->
     {% endblock %}
+
+    {% endblock %}
+
     <title>{% block title %}Omnichannel{% endblock %}</title>
 
     {% block head %}
     <!--head-->
     {% endblock %}
-    {% endblock %}
-    <!--end parent_head-->
+{% endblock %}
+<!--end parent_head-->
 </head>
 
 <body>
@@ -51,5 +58,9 @@
     {% block before_body_end %}
     <!--body_end-->
     {% endblock %}
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
