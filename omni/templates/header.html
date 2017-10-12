@@ -1,13 +1,37 @@
-<nav id="sidebar">
 {% block navbar %}
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/sites/">Sites</a></li>
-    <li><a href="/templates/">Templates</a></li>
-    <li><a href="#">Extensions</a></li>
-    {% if request.user.is_authenticated %}
-    <li><a href="/logout/">Logout</a></li>
-    {% endif %}
-</ul>
-{% endblock %}
+<nav id="sidebar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+         <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+                  aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="/sites/" class="navbar-link">Sites</a></li>
+                <li><a href="/templates/" class="navbar-link">Templates</a></li>
+                <li><a href="#" class="navbar-link disabled">Extensions</a></li>
+            </ul>
+            {% if request.user.is_authenticated %}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/logout/">Logout</a></li>
+            </ul>
+            {% endif %}
+        </div>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+
+        </ul>
+    </div>
 </nav>
+{% endblock %}
