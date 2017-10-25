@@ -25,7 +25,7 @@ SECRET_KEY = 'v!4ms(pb2y3o3uepy+_03bio2o7xgaal-mi@2$^bhy6uzl#ddo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'23.236.59.109', ]
+ALLOWED_HOSTS = [u'23.236.59.109', u'demo-omnichannel.magestore.com']
 
 
 # Application definition
