@@ -7,10 +7,12 @@
 {% endblock %}
 
 {% block content %}
-<form action="/login/" method="POST">
-    {% csrf_token %}
-    <input name="username" value="" placeholder="Username" />
-    <input name="password" value="" placeholder="Password" type="password" />
-    <button type="submit" value="login">LOGIN</button>
-</form>
+<div id="login-form">
+    <form action="/login/" method="POST">
+        {% csrf_token %}
+        <input name="username" value="" placeholder="Username" />
+        <input name="password" value="" placeholder="Password" type="password" />
+        <button type="submit" value="login">LOGIN</button>
+    </form>
+</div>
 {% endblock %}
