@@ -16,7 +16,11 @@
                         {% csrf_token %}
                         <input name="username" value="" placeholder="Username" />
                         <input name="password" value="" placeholder="Password" type="password" />
-                        <button type="submit" value="login">LOGIN</button>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <button type="submit" value="login" class="btn">LOGIN</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
