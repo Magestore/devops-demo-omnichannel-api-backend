@@ -31,3 +31,6 @@
 .login-form-wrap button:hover{
     background-color: #ff8840;
 }
+.login-form-wrap .btn-login-wrap {
+    margin-top: 20px;
+}
