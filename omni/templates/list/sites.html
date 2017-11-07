@@ -1,0 +1,21 @@
+<!-- Table -->
+<table class="table">
+    <thead>
+        <tr><th>#</th> <th>Path</th> <th>Name</th> <th>Owner</th> <th>Status</th> </tr>
+    </thead>
+    <tbody>
+        {% for site in object_list %}
+
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ site.url_path }}</td>
+                <td>{{ site.title|title }}</td>
+                <td>{% site.getOwnerName() %}</td>
+                <td>{{ site.state }}</td>
+            </tr>
+
+        {% empty %}
+            <tr><td>No data found.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>

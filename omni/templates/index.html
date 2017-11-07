@@ -19,17 +19,9 @@
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
                     <div class="panel-heading">Demo Sites</div>
-
-                    <!-- Table -->
-                    <table class="table">
-                        <thead>
-                            <tr><th>#</th> <th>Path</th> <th>Name</th> <th>Owner</th> <th>Status</th> </tr>
-                        </thead>
-                        <tbody>
-                            <tr><th scope="row">1</th> <td>/starter-m2</td> <td>Starter M2</td> <td>Robert</td> <td>Active</td></tr>
-                            <tr><th scope="row">2</th> <td>/grow-m2</td> <td>Growth M2</td> <td>Robert</td> <td>Stopped</td></tr>
-                        </tbody>
-                    </table>
+                    {% block sites %}
+                    {% include "list/sites.html" %}
+                    {% endblock %}
                 </div>
             </div>
         </div>
