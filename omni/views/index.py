@@ -22,4 +22,4 @@ class View(ListView):
         return super(View, self).dispatch(*args, **kwargs)
 
     def getActiveMenu(self):
-        return 'index'
+        return menu.getActive()
