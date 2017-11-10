@@ -6,7 +6,7 @@ from django.utils.decorators import method_decorator
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
 from omni.models import objects
-#from omni.models import menu
+from omni.models.menu import Menu
 
 # Create your views here.
 class View(ListView):
@@ -15,6 +15,7 @@ class View(ListView):
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
+        menu = Menu()
         menu.setActive('index')
         return super(View, self).dispatch(*args, **kwargs)
 

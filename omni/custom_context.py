@@ -5,5 +5,5 @@ from django.template import RequestContext
 from omni.models.menu import Menu
 
 def menu_context(request):
-    menu = Menu()
+
     return {'menu': menu}
