@@ -16,7 +16,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="{% if menu.active == 'home' %}active{% endif %}"><a href="/">Home {% if menu.active == 'home' %}<span class="sr-only">(current)</span>{% endif %}</a></li>
+                <li class="{% if menu.active == 'home' %}active{% endif %}"><a href="/">Home menu active {{ menu.active }} {% if menu.active == 'home' %}<span class="sr-only">(current)</span>{% endif %}</a></li>
                 <li class="{% if menu.active == 'site' %}active{% endif %}"><a href="/sites/" class="navbar-link">Sites</a></li>
                 <li class="{% if menu.active == 'template' %}active{% endif %}"><a href="/templates/" class="navbar-link">Templates</a></li>
                 <li class="disabled" title="This feature not available now!"><a href="#" class="navbar-link">Extensions</a></li>
