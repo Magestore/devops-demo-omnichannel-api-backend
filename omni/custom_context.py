@@ -8,5 +8,5 @@ from omni.models.menu import Menu
 menu = Menu()
 
 def menu_context(request):
-
+    global menu
     return {'menu': menu}

@@ -15,7 +15,7 @@ class View(ListView):
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-
+        global menu
         menu.setActive('index')
         return super(View, self).dispatch(*args, **kwargs)
 
