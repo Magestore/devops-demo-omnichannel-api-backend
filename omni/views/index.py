@@ -18,7 +18,7 @@ class View(ListView):
         global menu
         ## Global menu variable
         menu = Menu()
-        menu.setActive('index')
+        menu.setActive('home')
         return super(View, self).dispatch(*args, **kwargs)
 
     def getActiveMenu(self):
