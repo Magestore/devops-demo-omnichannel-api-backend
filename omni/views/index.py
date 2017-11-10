@@ -8,6 +8,9 @@ from django.views.generic import TemplateView, ListView
 from omni.models import objects
 from omni.models.menu import Menu
 
+## Global menu variable
+menu = Menu()
+
 # Create your views here.
 class View(ListView):
     model = objects.Site
@@ -15,7 +18,7 @@ class View(ListView):
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        menu = Menu()
+
         menu.setActive('index')
         return super(View, self).dispatch(*args, **kwargs)
 
