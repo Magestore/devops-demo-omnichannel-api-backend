@@ -7,7 +7,7 @@ class Menu():
     item = []
 
     def __init__(self):
-        self.item[0] = self.active
+        self.item.append(self.active)
 
     def setActive(self, active=''):
         self.active = active
