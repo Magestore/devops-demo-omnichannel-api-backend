@@ -8,9 +8,6 @@ from django.views.generic import TemplateView, ListView
 from omni.models import objects
 from omni.models.menu import Menu
 
-## Global menu variable
-menu = Menu()
-
 # Create your views here.
 class View(ListView):
     model = objects.Site
