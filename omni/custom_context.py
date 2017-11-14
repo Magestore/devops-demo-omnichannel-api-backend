@@ -6,4 +6,5 @@ from omni.models.menu import Menu
 
 def menu_context(request):
     global menu
+    menu = Menu()
     return {'menu': menu}
